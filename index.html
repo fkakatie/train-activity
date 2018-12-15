@@ -7,6 +7,8 @@
 
     <title>Train Activity</title>
 
+    <link rel="shortcut icon" href="favicon.ico">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -16,19 +18,33 @@
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 
     <!-- MEDIA QUERIES -->
+    <link rel="stylesheet" media="screen and (max-width: 504px)" href="assets/css/w504.css">
 
 </head>
 
 <body>
 
-    <header>
+    <header id="trPic">
+
         <div class="container">
-            <h1>Train Schedule</h1>
+            <div class="mainHead">
+
+                <div>
+                <h1>Train Schedule</h1>
+                <p>Please enjoy this fictional train schedule. Even add your own train, if you dare.</p>
+                </div>
+
+                <button id="trBtn">
+                    <i class="fas fa-train"></i>
+                </button>
+                
+            </div>
         </div>
+
     </header>
 
     <section>
-        <div class="container grid">
+        <div class="container">
             
             <div id="trTable">
                 <table id="trainSched">
@@ -37,59 +53,97 @@
                             <td class="trName">Train Name</td>
                             <td class="trDest">Destination</td>
                             <td class="trFreq">Frequency</td>
-                            <td class="trNext">Next Arrival</td>
-                            <td class="trAway">Minutes Away</td>
+                            <td class="trNext"  colspan="2">Next Arrival</td>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tbod">
                     </tbody>
                 </table>
             </div>
 
-            <div>
-                <form>
-                    <div class="formField">
-                        <label for="trName">
-                            Train Name
-                        </label>
-                        <input type="text" id="trName">
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <span class="close">
+                            <i class="fas fa-times"></i>
+                        </span>
+
+                        <h2>Add a Train</h2>
+
                     </div>
-                    <div class="formField">
-                        <label for="trDest">
-                            Destination
-                        </label>
-                        <input type="text" id="trDest" id="trDest">
-                    </div>
-                    <div class="formField">
-                        <label for="trFirst">
-                            First Train Depature Time
-                        </label>
-                        <input type="time" id="trFirst" id="trFirst">
-                    </div>
-                    <div class="formField">
-                        <label for="trFreq">
-                            Frequency
-                        </label>
-                        <input type="number" id="trFreq" id="trFreq" min="0" placeholder="Time in minutes">
+                    
+                    <div class="modal-body">
+            
+                        <form>
+                            <div class="formField">
+                                <label for="trName">
+                                    Train Name
+                                </label>
+                                <input type="text" id="trName">
+                            </div>
+                            <div class="formField">
+                                <label for="trDest">
+                                    Destination
+                                </label>
+                                <input type="text" id="trDest" id="trDest">
+                            </div>
+                            <div class="formField">
+                                <label for="trFirst">
+                                    First Train Depature Time
+                                </label>
+                                <input type="time" id="trFirst" id="trFirst">
+                            </div>
+                            <div class="formField">
+                                <label for="trFreq">
+                                    Frequency
+                                </label>
+                                <input type="number" id="trFreq" id="trFreq" min="0" placeholder="Time in minutes">
+                            </div>
+
+                            <div class="form-buttons">
+
+                                <button class="formBtn" id="submitBtn">
+                                    Add Train
+                                </button>
+
+                                <button class="formBtn" type="reset">
+                                    Reset
+                                </button>
+
+                            </div>
+
+                        </form>
+
                     </div>
 
-                    <button class="formBtn" id="submitBtn">
-                        Add Train
-                    </button>
-
-                    <button class="formBtn" type="reset">
-                        Reset
-                    </button>
-                </form>
             </div>
-
+        
         </div>
+
     </section>
 
-    <footer>
-        <div class="container">
-            &copy; 2018
+    <footer id="footcolor">
+
+        <div class="container footgrid">
+    
+            <nav>
+                <ul>
+                    <li><a href="https://fkakatie.github.io/responsive-portfolio/index.html" target="_blank">About</a></li><!--
+                    --><li><a href="https://fkakatie.github.io/responsive-portfolio/portfolio.html" target="_blank">Portfolio</a></li><!--
+                    --><li><a href="https://fkakatie.github.io/responsive-portfolio/contact.html" target="_blank">Contact</a></li><!--
+                    --><li><a href="https://github.com/fkakatie" target="_blank"><i class="fab fa-lg fa-github-square"></i></a></li>
+                </ul>
+            </nav>
+    
+            <div class="copyright">
+                <p>&copy; 2018</p>
+            </div>
+        
         </div>
+            
     </footer>
 
 <!-- JAVASCRIPT -->

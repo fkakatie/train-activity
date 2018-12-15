@@ -7,13 +7,19 @@ BASIC SETUP
 body, button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1em;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 768px;
+    max-width: 1080px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
+}
+
+::selection {
+    background: #333;
+    color: #fff;
 }
 
 /*
@@ -23,7 +29,36 @@ HEADER
 */
 
 header {
-    background: lightcoral;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../images/train-color.jpg");
+    /* filter: hue-rotate(30deg); */
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header > .container {
+    position: relative;
+    height: 300px;
+}
+
+.mainHead {
+    /* position: absolute; */
+    /* bottom: 30px; */
+    height: 250px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-gap: 15px;
+    align-items: end;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 3em;
+    padding-bottom: 8px;
 }
 
 /*
@@ -32,10 +67,6 @@ SECTION
 ==============================
 */
 
-section {
-    background: lightgoldenrodyellow;
-}
-
 .grid {
     display: grid;
     grid-gap: 15px;
@@ -43,10 +74,6 @@ section {
 
 #trTable {
     overflow-x: auto;
-}
-
-#trForm {
-    border: 2px solid red;
 }
 
 /*
@@ -64,7 +91,7 @@ table {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ccc; 
+    background: #333; 
 }
 
 .trName {
@@ -95,7 +122,7 @@ table {
 }
 
 td {
-    border: 1px solid black;
+    border: 1px solid #333;
     padding: 10px 15px;
     vertical-align: middle;
 }
@@ -103,7 +130,8 @@ td {
 thead td {
     font-weight: bold;
     vertical-align: middle;
-    background: #ccc;
+    background: #333;
+    color: #fff;
 }
 
 tbody td {
@@ -116,8 +144,139 @@ tbody tr:nth-of-type(even) {
 }
 
 tbody tr:hover {
-    background: #fec;
+    background: #ccc;
     transition: .75s all;
+}
+
+/*
+==============================
+FOOTER
+==============================
+*/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: calc(56px + 15px);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+footer nav ul {
+    display: flex;
+}
+
+footer nav li {
+    flex-basis: auto;
+    padding-right: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all .75s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: right;
+}
+
+/*
+==============================
+MODALS
+==============================
+*/
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 8%; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: #333; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    min-width: 300px;
+    box-shadow: 0px 10px 10px rgb(0,0,0, 0.2);
+}
+
+h2 {
+    color: #fff;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.close {
+    color: rgba(255, 255, 255, 0.8);
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: 0.75s all;
+}
+
+.close:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 30px;
+    background: #794a00;
+    color: #fff;
+}
+
+.modal-body {
+    margin: 30px;
+    padding-bottom: 5px;
+}
+
+#trBtn {
+    font-size: 16px;
+    height: 50px;
+    width: 50px;
+    margin-right: 40px;
+    border-radius: 25px;
+    border: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 0px 5px 5px rgb(0,0,0, 0.8);
+}
+
+#trBtn:hover {
+    box-shadow: none;
 }
 
 /*
@@ -125,6 +284,10 @@ tbody tr:hover {
 FORM
 ==============================
 */
+
+form {
+    margin: 15px 0;
+}
 
 .formField {
     margin-bottom: 10px;
@@ -142,19 +305,20 @@ input {
     min-height: 34px;
 }
 
+.form-buttons {
+    text-align: center;
+    padding-top: 8px;
+}
+
 .formBtn {
     background: #333;
     color: #fff;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 18px;
+    border-radius: 50px;
 }
 
-/*
-==============================
-FOOTER
-==============================
-*/
-
-footer {
-    background: lightblue;
+.formBtn:hover {
+    filter: brightness(0.5);
+    transition: 0.75s all;
 }

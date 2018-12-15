@@ -1,0 +1,59 @@
+@media screen and (max-width: 504px) {
+    
+    /*
+    ==============================
+    BASIC SETUP
+    ==============================
+    */
+
+    /*
+    ==============================
+    HEADER
+    ==============================
+    */
+
+    .mainHead {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 50px;
+    }
+
+    #trBtn {
+        justify-self: end;
+    }
+
+    /*
+    ==============================
+    SECTION
+    ==============================
+    */
+
+    /*
+    ==============================
+    FOOTER
+    ==============================
+    */
+
+    body {
+        margin-bottom: calc(88px + 15px);
+    }
+
+    footer .container {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        width: 100vw;
+    }
+
+    footer .container > * {
+        text-align: center;
+    }
+
+    footer nav ul {
+        justify-content: space-around;       
+    }
+
+    footer nav li {
+        text-align: center;
+        padding-right: 0;
+    }
+
+}
