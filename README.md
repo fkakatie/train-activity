@@ -4,7 +4,7 @@ Enjoy this fictional train schedule. Even add your own train, if you dare. :trai
 
 ## What this project does ## 
 
-This project stores user data in and retrieves data from [`Firebase`](https://firebase.google.com/). Time is manipulated and parsed using [`Moment.js`](https://momentjs.com/). `jQuery` is used to display information in the `DOM` and the user form is contained in a `modal`.
+This project stores user data in and retrieves data from [`Firebase`](https://firebase.google.com/). Time is manipulated and parsed using [`Moment.js`](https://momentjs.com/). `jQuery` is used to display information in the `DOM` and the user form is contained in a `modal`. For no discernable reason, a `hue-rotate filter` has been added to the page and modal headers and is manipulated with a `setInterval timer` every five seconds.
 
 ## How users can get started with this project ## 
 
