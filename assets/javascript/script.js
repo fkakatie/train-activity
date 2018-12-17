@@ -39,6 +39,7 @@ $(document).ready(function() {
         var trainDest = $('#trDest').val().trim();
         var trainFirst = $('#trFirst').val().trim();
         var trainFreq = $('#trFreq').val().trim();
+            trainFreq = Math.round(trainFreq);
 
         // execute if form is fully completed
         if (trainName !== '' && trainDest !== '' && trainFirst !== '' && trainFreq !== '') {
