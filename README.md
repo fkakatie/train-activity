@@ -19,7 +19,7 @@ This project stores user data in and retrieves data from [`Firebase`](https://fi
 
 ## Where users can get help with this project ##
 
-If you have any questions about this obviously very interesting project, initiate a new pull request and leave a comment.
+If you have any questions about this obviously very interesting project, visit my portfolio and [send me a message](https://fkakatie.github.io/responsive-portfolio/contact.html).
 
 ## Who maintains this project ## 
 
